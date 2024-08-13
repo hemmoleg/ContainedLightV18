@@ -1,0 +1,147 @@
+//cross
+.cross{
+  height: 2rem;
+  width: 2rem;
+  &:after{
+    content: "\002b";
+    font-size: 50px;
+    position: relative;
+    top: -20px;
+  }
+
+  &.right{
+    margin-left: auto;
+  }
+}
+
+.mini-logo-container{
+  cursor: pointer;
+  width: fit-content;
+}
+
+#logo{
+  width: 2rem;
+  height: 2rem;
+  //third value from right to adjust for length of "contained"
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 70% 100%, 100% 0, 0 100%);
+}
+
+.imdb-logo{
+  font: 1.5rem Impact, sans-serif;
+  margin-left: auto;
+}
+
+.instagram-logo {
+  box-sizing: border-box;
+  position: relative;
+  top: 3px;
+  right: 3px;
+  display: block;
+  transform: scale(1.3);
+  transform-origin: 100% 0%;
+  border: 2px solid transparent;
+  box-shadow: 0 0 0 2px;
+  border-radius: 4px;
+  width: 20px;
+  height: 20px;
+
+  margin-left: auto;
+ }
+ 
+ .instagram-logo::after,
+ .instagram-logo::before {
+  content: "";
+  display: block;
+  box-sizing: border-box;
+  position: absolute
+ }
+ 
+ .instagram-logo::after {
+  border: 2px solid;
+  left: 3px;
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  top: 3px
+ }
+ 
+ .instagram-logo::before {
+  border-radius: 3px;
+  width: 2px;
+  height: 2px;
+  background: currentColor;
+  right: 1px;
+  top: 1px
+ } 
+
+//toggle 2
+.toggle-container{
+ position: relative;
+}
+
+//toggle 3
+.l {
+	display: block;
+	margin-bottom: 1.5em;
+	
+	font-size: 1.3em;
+	//border: 0.15em solid black;
+	border-width: 0.15em;
+  border-style: solid;
+  border-radius: 0.75em;
+	
+	color: #fdea7b;
+	display: inline-flex;
+	align-items: center;
+	margin: auto;
+	padding: 0.15em;
+	width: 2.7em;
+	height: 1.5em;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+
+  transform: scale(0.75);
+  transform-origin: 0% 50%;
+
+  @media (min-width: 768px) {
+    transform: unset;
+  }
+}
+.l:before, .l:after {
+	box-sizing: border-box;
+	content: "";
+	display: block;
+}
+.l:before {
+	background-color: rgb(248 250 252);
+	border-radius:50%;
+	width: 0.9em;
+	height: 0.9em;
+	transition: background-color 0.5s ease-out, transform 0.5s ease-out;
+	z-index: 1;
+}
+.l:after {
+	background:
+		repeating-linear-gradient(#000 20%,#000 20%,#000 40%) 0 50% / 50% 100%,
+		radial-gradient(circle,#fff 25%, transparent 26%);
+	background-repeat: no-repeat;
+	border: 0.25em solid transparent;
+	border-left: 0.4em solid #555;
+	border-right: 0 solid transparent;
+	transition: border-left-color 0.5s ease-out, transform 0.5s ease-out;
+	transform: translateX(-22.5%);
+	transform-origin: 25% 50%;
+	width: 1.2em;
+	height: 0.9em;
+	margin-left: -0.1em;
+}
+/* Checked */
+.l:checked:before {
+	background-color: #d7d7d7;
+	transform: translateX(125%)
+}
+.l:checked:after {
+	border-left-color: #d7d7d7;
+	transform: translateX(4%) rotateY(180deg);
+}

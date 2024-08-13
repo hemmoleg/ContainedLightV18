@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "testV18NoSSR": {
+    "ContainedLightV18": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -24,7 +24,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/test-v18-no-ssr",
+            "outputPath": "dist/ContainedLight-v18",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -41,7 +41,14 @@
             "styles": [
               "src/styles.less"
             ],
-            "scripts": []
+            "scripts": [],
+            "server": "src/main.server.ts",
+            "prerender": {
+              "routesFile": "routes.txt"
+            },
+            "ssr": {
+              "entry": "server.ts"
+            }
           },
           "configurations": {
             "production": {
@@ -71,10 +78,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "testV18NoSSR:build:production"
+              "buildTarget": "ContainedLightV18:build:production"
             },
             "development": {
-              "buildTarget": "testV18NoSSR:build:development"
+              "buildTarget": "ContainedLightV18:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -105,5 +112,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "94d67a90-b9fc-48fa-b029-549fb4a7d367"
   }
 }

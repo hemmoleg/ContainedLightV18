@@ -1,1 +1,41 @@
 /* You can add global styles to this file, and also import other style files */
+/* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*, ::after, ::before{
+  font-family: 'Noto Sans';
+
+  transition: background-color 0.3s, color 0.3s;
+  transition-timing-function: ease-in-out;
+  transition-delay: 0ms;
+}
+
+.special-height{
+  min-height: calc(100vh - 108px);
+  
+  @media (min-width: 768px) {
+    min-height: calc(100vh - 120px);
+  }
+}
+
+.text-color{
+  @apply text-neutral-900 dark:text-slate-50;
+}
+.text-color-hover{
+  @apply hover:text-[#F1C203] dark:hover:text-[#F1C203];
+}
+// .text-color-hover{
+//   @apply text-[#F1C203] dark:text-[#F1C203];
+// }
+
+.greater-than{
+  @apply left-2;
+  @apply group-hover:left-4;
+  
+  position: relative;
+  top: 0.05rem;
+
+  transition: left 0.3s;
+}

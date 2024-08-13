@@ -1,0 +1,31 @@
+<div class="content" role="main">
+  
+  <div class="flex justify-center items-end special-height pb-[18vh]">
+    <div class="flex flex-col md:flex-row md:max-w-xl">
+      <!-- <img class=" w-full h-96 md:h-auto object-cover md:w-48 rounded-t-lg md:rounded-none md:rounded-l-lg" src="https://mdbootstrap.com/wp-content/uploads/2020/06/vertical.jpg" alt="" /> -->
+      
+      <div class="logo-container w-64">
+        <div id="logo" class="bg-neutral-900 dark:bg-white"></div>
+        <span class="text-xl text-color tracking-wide font-bold -mt-1 -ml-[2px]">CONTAINED</span>
+        <span class="text-xl text-color tracking-wide font-light pl-2">LIGHT</span>
+      </div>
+
+      <div class="text-5xl pt-8 flex flex-col justify-start">
+        <div class="group font-normal mb-2 cursor-pointer">
+          <a class="text-color group-hover:text-[#F1C203]" href="/movies/index.html">Films</a>
+          <span class="text-4xl text-color group-hover:text-[#F1C203] greater-than">></span>
+        </div>
+          <div class="group font-normal mb-2 cursor-pointer">
+            <a class="text-color group-hover:text-[#F1C203]" [routerLink]="['about']">About</a>
+            <span class="text-4xl text-color group-hover:text-[#F1C203] greater-than">></span>
+        </div>
+        <div class="group font-normal mb-2 cursor-pointer">
+          <a class="text-color group-hover:text-[#F1C203]" [routerLink]="['contact']">Contact</a>
+          <span class="text-4xl text-color group-hover:text-[#F1C203] greater-than">></span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
