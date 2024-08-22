@@ -46,9 +46,7 @@
             "prerender": {
               "routesFile": "routes.txt"
             },
-            "ssr": {
-              "entry": "server.ts"
-            }
+            "ssr": false
           },
           "configurations": {
             "production": {
