@@ -1,6 +1,10 @@
 <div class="flex flex-row overflow-hidden md:pt-7 pt-5 md:mx-8 mx-5">
-  <div class="toggle-container">
-    <input class="l border-neutral-900 dark:border-slate-50" type="checkbox" [checked]="lightsOn" (change)="switchLight()">
+  
+  <div *ngIf="currentRoute == '/'" class="cross after:text-neutral-900 after:dark:text-slate-50 after:font-thin"></div>
+
+  <div *ngIf="currentRoute != '/'" class="mini-logo-container"
+    (click)="onClickMiniLogo()">
+    <div id="logo" class=" bg-neutral-900 dark:bg-white hover:bg-[#F1C203] dark:hover:bg-[#F1C203]"></div>
   </div>
 
   <!-- add this to below div once there is an imdb adress: *ngIf="currentRoute != '/contact'" -->
@@ -12,11 +16,9 @@
 <router-outlet></router-outlet>
 
 <div class="flex flex-row overflow-hidden md:pb-7 pb-5 md:mx-8 mx-5">
-  <div *ngIf="currentRoute == '/'" class="cross after:text-neutral-900 after:dark:text-slate-50 after:font-thin"></div>
-  
-  <div *ngIf="currentRoute != '/'" class="mini-logo-container"
-    (click)="onClickMiniLogo()">
-    <div id="logo" class=" bg-neutral-900 dark:bg-white hover:bg-[#F1C203] dark:hover:bg-[#F1C203]"></div>
+
+  <div class="toggle-container">
+    <input class="l border-neutral-900 dark:border-slate-50" type="checkbox" [checked]="lightsOn" (change)="switchLight()">
   </div>
 
   <!-- add this to below div once there is an insta adress: *ngIf="currentRoute != '/contact'" -->

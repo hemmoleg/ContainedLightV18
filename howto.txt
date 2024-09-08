@@ -1,2 +1,0 @@
-- in generated index.html replace base with <base href="c%3A">
-- in other hrefs change "/{foo}" to "foo/index.html"
