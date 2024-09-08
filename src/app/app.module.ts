@@ -9,6 +9,7 @@ import { RouterModule, UrlSerializer } from '@angular/router';
 import { MovieSelectionComponent } from './movie-selection/movie-selection.component';
 import { provideHttpClient } from '@angular/common/http';
 import { MovieComponent } from './movie/movie.component';
+import { ContactComponent } from './contact/contact.component';
 
 
 @NgModule({
@@ -16,8 +17,9 @@ import { MovieComponent } from './movie/movie.component';
     AppComponent,
     HomeComponent,
     MovieSelectionComponent,
+    MovieComponent,
     AboutComponent,
-    MovieComponent
+    ContactComponent
   ],
   imports: [
     BrowserModule,
@@ -26,6 +28,7 @@ import { MovieComponent } from './movie/movie.component';
       { path: 'about', component: AboutComponent },
       { path: 'movies', component: MovieSelectionComponent },
       { path: 'movies/:movieID', component: MovieComponent },
+      { path: 'contact', component: ContactComponent}
     ])
   ],
   providers: [
