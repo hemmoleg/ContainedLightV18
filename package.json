@@ -4,7 +4,8 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "ng build && node fix_js_paths.js",
+    "build-noFix": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "serve:ssr:ContainedLightV18": "node dist/test-v18-no-ssr/server/server.mjs"

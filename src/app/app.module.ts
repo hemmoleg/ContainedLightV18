@@ -29,7 +29,7 @@ import { ContactComponent } from './contact/contact.component';
       { path: 'movies', component: MovieSelectionComponent },
       { path: 'movies/:movieID', component: MovieComponent },
       { path: 'contact', component: ContactComponent}
-    ])
+    ], {useHash: true})
   ],
   providers: [
     provideClientHydration(),
